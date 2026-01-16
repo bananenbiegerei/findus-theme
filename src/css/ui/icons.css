@@ -1,11 +1,11 @@
-// Used by `bb_icon()`
+/* Used by `bb_icon()` */
 .bb-icon {
 	display: inline-block;
 	svg {
 		margin-bottom: 0.1em;
 	}
-	// Default size
-	// NOTE: should match 'icon-base' below (for consistency)
+	/* Default size */
+	/* NOTE: should match 'icon-base' below (for consistency) */
 	&:not(&[class*='icon-']) {
 		@apply h-7 w-7;
 		svg {
@@ -13,15 +13,15 @@
 			width: 100%;
 		}
 	}
-	// Make sure SVG gets resized properly
-	// NOTE: This will be buggy in Safari if you use a class 'icon-*' that is not defined below!
+	/* Make sure SVG gets resized properly */
+	/* NOTE: This will be buggy in Safari if you use a class 'icon-*' that is not defined below! */
 	&[class*='icon-'] {
 		svg {
 			height: 100%;
 			width: 100%;
 		}
 	}
-	// Custom sizes
+	/* Custom sizes */
 	&.icon-xs {
 		@apply h-4 w-4;
 	}
@@ -41,7 +41,7 @@
 		@apply h-12 w-12;
 	}
 
-	// Special cases
+	/* Special cases */
 	&.grid {
 		display: grid;
 		svg {

@@ -1,27 +1,17 @@
 require('dotenv').config();
 const { src, dest, parallel, series, watch } = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
-const sassGlob = require('gulp-sass-glob');
 const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
 const tailwindcss = require('@tailwindcss/postcss');
 const cssnano = require('cssnano');
-const webpack = require('webpack-stream');
 const gulpEsbuild = require('gulp-esbuild');
 const { createGulpEsbuild } = require('gulp-esbuild');
 const gulpEsbuildIncremental = createGulpEsbuild({ incremental: true });
 const browserSync = require('browser-sync').create();
 
 function stylesDev() {
-	return src(['./src/scss/site.scss', './src/scss/editor.scss'])
-		.pipe(sassGlob())
+	return src(['./src/css/site.css', './src/css/editor.css'])
 		.pipe(sourcemaps.init())
-		.pipe(
-			sass({
-				includePaths: ['node_modules'],
-				silenceDeprecations: ['import', 'legacy-js-api'],
-			}).on('error', sass.logError)
-		)
 		.pipe(postcss([tailwindcss()]))
 		.pipe(sourcemaps.write('.'))
 		.pipe(dest('./css'))
@@ -29,14 +19,7 @@ function stylesDev() {
 }
 
 function stylesProd() {
-	return src(['./src/scss/site.scss', './src/scss/editor.scss'])
-		.pipe(sassGlob())
-		.pipe(
-			sass({
-				includePaths: ['node_modules'],
-				silenceDeprecations: ['import', 'legacy-js-api'],
-			}).on('error', sass.logError)
-		)
+	return src(['./src/css/site.css', './src/css/editor.css'])
 		.pipe(postcss([tailwindcss(), cssnano()]))
 		.pipe(dest('./css'));
 }
@@ -73,7 +56,7 @@ function dev() {
 		proxy: process.env.BROWSERSYNC_PROXY_URL,
 		open: process.env.BROWSERSYNC_OPEN_BROWSER == 'true',
 	});
-	watch('./src/scss/**/*.scss', stylesDev);
+	watch('./src/css/**/*.css', stylesDev);
 	watch('./src/js/**/*.js', esbuildDev).on('change', browserSync.reload);
 	watch('./**/*.php', stylesDev).on('change', browserSync.reload);
 	watch(['./img/**/*.*', './fonts/**/*.*']).on('change', browserSync.reload);

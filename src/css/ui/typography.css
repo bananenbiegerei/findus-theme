@@ -1,11 +1,11 @@
-// some old artiles are styled with strong tag
+/* some old articles are styled with strong tag */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-	@apply  mb-2 font-medium leading-tight;
+	@apply mb-2 font-medium leading-tight;
 }
 h1,
 .h1 {
@@ -34,10 +34,10 @@ h6,
 p,
 ul:not([class]),
 ol:not([class]) {
-	@apply mb-6 max-w-4xl text-lg  leading-normal lg:text-xl;
+	@apply mb-6 max-w-4xl text-lg leading-normal lg:text-xl;
 }
 .topline {
-	@apply  text-sm font-bold uppercase text-primary;
+	@apply text-sm font-bold uppercase text-primary;
 }
 
 .main-content {
@@ -49,18 +49,8 @@ ol:not([class]) {
 	}
 }
 
-strong {
-}
-
-.bb-cta-block,
-.bb-newsletter-block {
-	em {
-		@apply bg-primary px-1 not-italic text-white;
-	}
-}
-
-// Make the paragraphs inside a block inherit typography
-// Useful when we don't control the output
+/* Make the paragraphs inside a block inherit typography
+   Useful when we don't control the output */
 .text-inherit,
 .text-inherit p,
 .text-inherit ul,

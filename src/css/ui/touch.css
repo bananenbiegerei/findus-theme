@@ -1,4 +1,4 @@
-// Detection of touch devices to trigger mobile menu on tablets (breakpoint md would otherwise show the desktop version)
+/* Detection of touch devices to trigger mobile menu on tablets (breakpoint md would otherwise show the desktop version) */
 
 @media only screen and (hover: none) {
 	.nohover\:hidden {

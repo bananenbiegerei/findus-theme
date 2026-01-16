@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import './vendor/basecoat.css';
 
 /* Tailwind v4 CSS-first configuration */
 @theme {
@@ -176,23 +177,28 @@
 	width: 3rem;
 }
 
-/* UI Basic components */
-@import './ui/nav';
-@import './ui/grid';
+/* UI Basic components, custom made by BB */
+@import './ui/typography.css';
+@import './ui/nav.css';
+@import './ui/grid.css';
+@import './ui/accessibility.css';
+@import './ui/badges.css';
+@import './ui/effects.css';
+@import './ui/fonts.css';
+@import './ui/header-top.css';
+@import './ui/heartbeat.css';
+@import './ui/icons.css';
+@import './ui/touch.css';
+@import './ui/buttons.css';
+@import './ui/forms.css';
+@import './ui/search.css';
 
-/* ACF blocks */
-@import '../../blocks/**/style.scss';
+/* ACF blocks - add explicit imports here when block styles are created */
+/* @import '../../blocks/block-name/style.css'; */
 
 /* Plugins overwrites */
-@import 'plugin-overwrites/*';
-
-/* Templates */
-//@import './templates/*';
-
-/* Gutenberg Overwrites */
-//@import './gutenberg-overwrites/*';
+@import './plugin-overwrites/polylang.css';
+@import './plugin-overwrites/complianz.css';
 
 /* Components */
-@import './components/cards';
-//@import './blocks/image';
-//@import './components/main-menu';
+@import './components/cards.css';

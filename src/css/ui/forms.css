@@ -16,4 +16,4 @@ textarea {
 input[type='checkbox'] {
 	@apply rounded border-gray-300 text-primary shadow-sm focus:border-focus-300 focus:ring focus:ring-offset-0 focus:ring-focus-200/50;
 }
-/* submit buttons inherit .btn styling via buttons.scss */
+/* submit buttons inherit .btn styling via buttons.css */

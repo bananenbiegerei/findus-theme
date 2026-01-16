@@ -4,7 +4,7 @@
 .mobile-grid {
 	@apply grid grid-cols-2 xl:grid-cols-1 gap-10 xl:gap-0;
 }
-// refering to classes in containers.php
+/* referring to classes in containers.php */
 .outer-container {
 	@apply grid grid-cols-12 container;
 }

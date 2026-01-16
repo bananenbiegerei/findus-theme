@@ -16,25 +16,19 @@
 	.hide-for-editor {
 		@apply hidden;
 	}
-	// @import './inc/globals';
-	// @import './inc/grid';
-	// @import './inc/typography';
-	// @import './components/cards';
-	// @import './gutenberg-overwrites/gb-images';
 	@apply font-sans overflow-hidden p-0 font-normal;
 
-	// Make groups easy to see
+	/* Make groups easy to see */
 	.wp-block-group {
 		border: dotted 1px grey;
 	}
 
-	/* overwrite custom eidtor blocks */
+	/* overwrite custom editor blocks */
 	.wp-block,
 	.wp-block-post-title {
 		@apply px-0 container;
 		&.has-background {
 			@apply py-10 px-6;
-			// @include fluid-container;
 		}
 	}
 	.wp-block {
@@ -52,20 +46,9 @@
 	}
 	.wp-block-button {
 		.wp-block-button__link {
-			//@include button;
 		}
 	}
 
-	// @import './inc/color-scheme';
-	// @import './inc/globals';
-
-	// @import './inc/scafolding';
-	// @import './inc/fonts';
-	// @import './inc/typography';
-	// @import './inc/buttons';
-	// .is-root-container {
-	// 	@include fluid-container;
-	// }
 	/* Components */
 	.card {
 		@apply mt-0;

@@ -1,7 +1,6 @@
-// Unstyled
+/* Unstyled */
 .btn {
 	@apply inline-flex flex-shrink-0 cursor-pointer select-none flex-wrap items-center justify-start rounded-md border-transparent text-left text-xl leading-none transition duration-200 ease-out;
-	//@apply min-h-12 h-12 px-4;
 	@apply px-2.5 py-1.5;
 
 	/* disabled */
@@ -72,10 +71,10 @@
 	@apply content-[attr(aria-label)];
 }
 
-// Styled
-// hover + active color changes around 4-5 steps
+/* Styled */
+/* hover + active color changes around 4-5 steps */
 .btn {
-	@apply gap-2 border font-sans  no-underline;
+	@apply gap-2 border font-sans no-underline;
 	animation: button-pop var(--animation-btn, 0.25s) ease-out;
 
 	&:active:hover,
@@ -99,7 +98,7 @@
 
 	/* Menu */
 	&-menu {
-		@apply  inline-flex select-none flex-wrap items-center justify-start rounded-md border-transparent bg-transparent p-3 text-left text-base font-medium leading-none text-black transition duration-200 ease-out hover:border-gray hover:bg-gray;
+		@apply inline-flex select-none flex-wrap items-center justify-start rounded-md border-transparent bg-transparent p-3 text-left text-base font-medium leading-none text-black transition duration-200 ease-out hover:border-gray hover:bg-gray;
 
 		&.current {
 			@apply text-primary-500;
@@ -317,19 +316,11 @@
 
 /* group */
 .btn-menu-section {
-	@apply  rounded-md border-none bg-transparent text-sm font-bold uppercase text-black hover:bg-transparent hover:text-primary-800;
+	@apply rounded-md border-none bg-transparent text-sm font-bold uppercase text-black hover:bg-transparent hover:text-primary-800;
 }
 
 .btn-group {
 	@apply gap-2;
-	//     &>input[type="radio"]:checked.btn,
-	//     &>.btn-active {
-	//         @apply border-primary bg-primary text-white;
-
-	//         &:focus-visible {
-	//             @apply outline-primary outline outline-2;
-	//         }
-	//     }
 }
 
 /* radio input and checkbox as button */

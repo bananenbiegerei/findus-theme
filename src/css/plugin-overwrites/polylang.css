@@ -4,7 +4,7 @@ ul.language-switcher {
 			@apply hidden;
 		}
 		a {
-			@apply uppercase  text-primary;
+			@apply uppercase text-primary;
 		}
 	}
 }
