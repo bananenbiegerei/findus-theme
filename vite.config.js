@@ -2,6 +2,19 @@ import { defineConfig, loadEnv } from 'vite';
 import { resolve } from 'path';
 import tailwindcss from '@tailwindcss/vite';
 
+// Plugin to reload browser on PHP file changes
+function phpReload() {
+	return {
+		name: 'php-reload',
+		handleHotUpdate({ file, server }) {
+			if (file.endsWith('.php')) {
+				server.ws.send({ type: 'full-reload' });
+				return [];
+			}
+		},
+	};
+}
+
 export default defineConfig(({ mode }) => {
 	// Load env file
 	const env = loadEnv(mode, process.cwd(), '');
@@ -11,7 +24,7 @@ export default defineConfig(({ mode }) => {
 	const openBrowser = env.BROWSERSYNC_OPEN_BROWSER === 'true';
 
 	return {
-		plugins: [tailwindcss()],
+		plugins: [tailwindcss(), phpReload()],
 		build: {
 			// Output to dist directory
 			outDir: 'dist',
@@ -32,6 +45,7 @@ export default defineConfig(({ mode }) => {
 			preprocessorOptions: {
 				scss: {
 					api: 'modern-compiler',
+					silenceDeprecations: ['import'],
 				},
 			},
 		},

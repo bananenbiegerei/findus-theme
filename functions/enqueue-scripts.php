@@ -49,8 +49,9 @@ add_action('wp_enqueue_scripts', function () {
 
     if ($dev_mode) {
         // Development: Load from Vite dev server
+        // Both scripts must load in head for HMR to work
         wp_enqueue_script('vite-client', VITE_DEV_SERVER . '/@vite/client', [], null, false);
-        wp_enqueue_script('site', VITE_DEV_SERVER . '/src/js/site.js', [], null, true);
+        wp_enqueue_script('site', VITE_DEV_SERVER . '/src/js/site.js', ['vite-client'], null, false);
     } else {
         // Production: Load built assets from /dist
         if (file_exists($dist_js)) {
