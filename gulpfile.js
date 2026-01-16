@@ -4,9 +4,8 @@ const sass = require('gulp-sass')(require('sass'));
 const sassGlob = require('gulp-sass-glob');
 const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
-const tailwindcss = require('tailwindcss');
+const tailwindcss = require('@tailwindcss/postcss');
 const cssnano = require('cssnano');
-const autoprefixer = require('autoprefixer');
 const webpack = require('webpack-stream');
 const gulpEsbuild = require('gulp-esbuild');
 const { createGulpEsbuild } = require('gulp-esbuild');
@@ -22,7 +21,7 @@ function stylesDev() {
 				includePaths: ['node_modules'],
 			}).on('error', sass.logError)
 		)
-		.pipe(postcss([tailwindcss('./tailwind.config.js')]))
+		.pipe(postcss([tailwindcss()]))
 		.pipe(sourcemaps.write('.'))
 		.pipe(dest('./css'))
 		.pipe(browserSync.stream());
@@ -36,7 +35,7 @@ function stylesProd() {
 				includePaths: ['node_modules'],
 			}).on('error', sass.logError)
 		)
-		.pipe(postcss([tailwindcss('./tailwind.config.js'), autoprefixer(), cssnano()]))
+		.pipe(postcss([tailwindcss(), cssnano()]))
 		.pipe(dest('./css'));
 }
 

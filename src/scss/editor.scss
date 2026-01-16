@@ -1,6 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* Tailwind v4 CSS-first configuration for editor */
+@theme {
+	/* Font families */
+	--font-sans: "Arial", sans-serif;
+
+	/* Font weights */
+	--font-weight-light: 200;
+	--font-weight-normal: 300;
+	--font-weight-medium: 400;
+	--font-weight-bold: 500;
+}
 
 .block-editor-writing-flow {
 	.hide-for-editor {

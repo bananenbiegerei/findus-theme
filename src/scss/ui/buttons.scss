@@ -181,10 +181,10 @@
 
 	/* btn variants */
 	&-ghost {
-		@apply border border-transparent bg-transparent text-current shadow-none outline-current hover:border-opacity-0 hover:bg-primary-200 hover:bg-opacity-20;
+		@apply border border-transparent bg-transparent text-current shadow-none outline-current hover:border-transparent hover:bg-primary-200/20;
 
 		&.btn-active {
-			@apply border-opacity-0 bg-primary-600 bg-opacity-20;
+			@apply border-transparent bg-primary-600/20;
 		}
 
 		&.btn-secondary {
@@ -303,14 +303,14 @@
 	&.btn-disabled,
 	&[disabled],
 	&:disabled {
-		@apply border-opacity-0 bg-gray bg-opacity-20 text-primary-700 text-opacity-20;
+		@apply border-transparent bg-gray/20 text-primary-700/20;
 	}
 
 	@media (hover: hover) {
 		&-disabled:hover,
 		&[disabled]:hover,
 		&:disabled:hover {
-			@apply border-opacity-0 bg-gray bg-opacity-20 text-primary-700 text-opacity-20;
+			@apply border-transparent bg-gray/20 text-primary-700/20;
 		}
 	}
 }

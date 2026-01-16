@@ -1,10 +1,10 @@
-#searchform {	
+#searchform {
 	@apply w-full m-0 p-0;
 	input {
 		@apply focus:border-none focus:shadow-none focus:ring-transparent bg-transparent hover:bg-transparent  text-3xl w-full border-none;
 	}
 	#searchsubmit {
-		@apply btn sr-only;
+		@apply sr-only;
 	}
 	input[name="s"] {
 		@apply border-4 border-black;
