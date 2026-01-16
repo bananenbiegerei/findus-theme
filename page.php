@@ -4,7 +4,7 @@
 	<div class="container">
 		<div class="max-w-4xl">
 			<h1><?php the_title(); ?></h1>
-			<?php the_content(); ?>
+			<?php bb_render_components(); ?>
 		</div>
 	</div>
 <?php

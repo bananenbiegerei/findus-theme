@@ -3,7 +3,7 @@
 	<h1><?php the_title(); ?></h1>
 	<div class="lg:flex gap-8">
 		<div class="lg:w-3/4">
-			<?php the_content(); ?>
+			<?php bb_render_components(); ?>
 		</div>
 		<div class="w-1/4">
 			<?php
