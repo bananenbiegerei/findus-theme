@@ -177,7 +177,8 @@
 }
 
 /* UI Basic components */
-@import './ui/*';
+@import './ui/nav';
+@import './ui/grid';
 
 /* ACF blocks */
 @import '../../blocks/**/style.scss';

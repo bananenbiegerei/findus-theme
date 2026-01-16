@@ -19,6 +19,7 @@ function stylesDev() {
 		.pipe(
 			sass({
 				includePaths: ['node_modules'],
+				silenceDeprecations: ['import', 'legacy-js-api'],
 			}).on('error', sass.logError)
 		)
 		.pipe(postcss([tailwindcss()]))
@@ -33,6 +34,7 @@ function stylesProd() {
 		.pipe(
 			sass({
 				includePaths: ['node_modules'],
+				silenceDeprecations: ['import', 'legacy-js-api'],
 			}).on('error', sass.logError)
 		)
 		.pipe(postcss([tailwindcss(), cssnano()]))
