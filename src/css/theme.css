@@ -30,11 +30,13 @@
 	width: 3rem;
 }
 
-/* UI Basic components, custom made by BB */
+/* UI Basic, custom made by BB */
 @import './ui/typography.css';
-@import './ui/nav.css';
 @import './ui/grid.css';
-/* @import './ui/accessibility.css';
+
+/* Components, custom made by BB */
+@import '../../bb-components/bb-navbars/bb-navbar-simple/style.css';
+/*
 @import './ui/badges.css';
 @import './ui/effects.css';
 @import './ui/fonts.css';
