@@ -20,7 +20,7 @@ function stylesDev() {
 
 function stylesProd() {
 	return src(['./src/css/site.css', './src/css/editor.css'])
-		.pipe(postcss([tailwindcss(), cssnano()]))
+		.pipe(postcss([tailwindcss(), cssnano({ preset: ['default', { calc: false }] })]))
 		.pipe(dest('./css'));
 }
 

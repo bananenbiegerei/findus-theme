@@ -45,7 +45,7 @@ ol:not([class]) {
 	ul a,
 	ol a,
 	a.link {
-		@apply underline decoration-1 underline-offset-2 transition transition hover:text-primary-300;
+		@apply underline decoration-1 underline-offset-2 transition hover:text-primary/70;
 	}
 }
 
