@@ -7,7 +7,7 @@ h5,
 h6 {
 	@apply mb-2 font-medium leading-tight;
 }
-h1,
+/* h1,
 .h1 {
 	@apply lg:text-5xl text-2xl;
 }
@@ -30,7 +30,7 @@ h5,
 h6,
 .h6 {
 	@apply text-sm lg:text-base;
-}
+} */
 p,
 ul:not([class]),
 ol:not([class]) {
