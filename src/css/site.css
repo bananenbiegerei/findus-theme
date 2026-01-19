@@ -1,5 +1,13 @@
 @import "tailwindcss";
-@import "./theme-basics";
+
+/* Safelist for dynamic color classes */
+@source "./safelist.html";
+
+/* Load before basecoate etc. */
+/* UI Basic components, custom made by BB */
+@import './ui/fonts.css';
+@import './ui/colors.css';
+
 @import "basecoat-css";
 @import "./basecoat-theme";
 @import "./theme";

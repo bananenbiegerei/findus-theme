@@ -1,38 +1,8 @@
-
-/* Custom icon size utilities for @apply usage */
-@utility icon-xs {
-	height: 1rem;
-	width: 1rem;
-}
-
-@utility icon-sm {
-	height: 1.25rem;
-	width: 1.25rem;
-}
-
-@utility icon-base {
-	height: 1.75rem;
-	width: 1.75rem;
-}
-
-@utility icon-lg {
-	height: 2rem;
-	width: 2rem;
-}
-
-@utility icon-xl {
-	height: 2.25rem;
-	width: 2.25rem;
-}
-
-@utility icon-xxl {
-	height: 3rem;
-	width: 3rem;
-}
-
 /* UI Basic, custom made by BB */
+/* @import './ui/colors.css'; */
 @import './ui/typography.css';
 @import './ui/grid.css';
+
 
 /* Components, custom made by BB */
 @import '../../bb-components/bb-navbars/bb-navbar-simple/style.css';
