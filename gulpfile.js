@@ -10,7 +10,7 @@ const gulpEsbuildIncremental = createGulpEsbuild({ incremental: true });
 const browserSync = require('browser-sync').create();
 
 function stylesDev() {
-	return src(['./src/css/site.css', './src/css/editor.css'])
+	return src('./src/css/site.css')
 		.pipe(sourcemaps.init())
 		.pipe(postcss([tailwindcss()]))
 		.pipe(sourcemaps.write('.'))
@@ -19,7 +19,7 @@ function stylesDev() {
 }
 
 function stylesProd() {
-	return src(['./src/css/site.css', './src/css/editor.css'])
+	return src('./src/css/site.css')
 		.pipe(postcss([tailwindcss(), cssnano({ preset: ['default', { calc: false }] })]))
 		.pipe(dest('./css'));
 }
