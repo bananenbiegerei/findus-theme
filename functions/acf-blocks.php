@@ -32,6 +32,7 @@ add_filter('acf/load_field/name=bb_components', function ($field) {
         'image',
         'paragraph',
         'spacer',
+        'columns',
         // 'video',
     ];
 
