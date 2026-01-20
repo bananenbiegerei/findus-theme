@@ -24,3 +24,9 @@
 /* Plugins overwrites */
 /* @import './plugin-overwrites/polylang.css';
 @import './plugin-overwrites/complianz.css'; */
+
+/* Basecoat overwrites */
+.btn,
+[class*="btn-"] {
+  box-shadow: none;
+}
