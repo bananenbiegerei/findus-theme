@@ -40,11 +40,3 @@ EOF;
         }
     }
 }, 999);
-
-// Editor style
-add_action('admin_enqueue_scripts', function () {
-    $editor_css = get_template_directory() . '/css/editor.css';
-    if (file_exists($editor_css)) {
-        wp_enqueue_style('editor', get_template_directory_uri() . '/css/editor.css', [], get_asset_version($editor_css));
-    }
-}, 999);
