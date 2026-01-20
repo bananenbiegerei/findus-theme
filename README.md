@@ -6,11 +6,21 @@
 
 The first thing to do after cloning the repo is to install node modules for the project: `npm install`.
 
-### ACF Blocks Submodule
+### Git Submodules
 
-Our ACF blocks are now have their own repository: `https://github.com/bananenbiegerei/bb-blocks`. They can be added to any theme as a submodule.
+This theme uses two git submodules:
 
-The `bb-blocks` submodule is installed by running `git submodule update --init` from the project directory.
+**bb-blocks** - ACF flexible content blocks
+Repository: `https://github.com/bananenbiegerei/bb-blocks`
+
+**bb-components** - Reusable theme components (navbars, footers, etc.)
+Repository: `https://github.com/bananenbiegerei/bb-components`
+
+Install both submodules by running:
+
+```bash
+git submodule update --init --recursive
+```
 
 ### BrowserSync
 
@@ -34,7 +44,18 @@ The Prettier config is defined in `package.json` under the `prettier` key and sh
 
 ### ACF-JSON
 
-@Ingo noch mal schreiben
+ACF field groups are stored as JSON files for version control and synchronization.
+
+**Directory structure:**
+- `bb-blocks/acf-json/` - Field groups for the blocks submodule (managed in bb-blocks repo)
+- `acf-json/` - Theme-specific field groups (currently empty, for custom fields)
+
+**How it works:**
+1. ACF automatically saves field group changes to JSON files in the `acf-json` directory
+2. On other environments, ACF detects JSON changes and syncs them to the database
+3. Sync manually via WP Admin → ACF → Sync Available
+
+**Best practice:** Always commit JSON changes after editing field groups in wp-admin.
 
 ## String Translations
 
@@ -46,53 +67,59 @@ The theme will set the constant `BB_TEXT_DOMAIN` to the value setup in `style.cs
 
 When logged in the current page can be edited by pressing `CTLR-E`.
 
-## Colors
+## Tailwind CSS v4
 
-The colors used in the theme must be declared in (at least) two locations: the Tailwind configuration and a script to load the colors values into the ACF fields.
+This theme uses Tailwind CSS v4 with the new CSS-first configuration.
 
-### Tailwind Config
+### Configuration
 
-In `tailwind.config.js`:
+**Main entry point:** `src/css/tailwind.css`
 
+```css
+@import "tailwindcss";
+@source "../../**/*.php";
+@source "../../bb-blocks/**/*.php";
 ```
-module.exports = {
-	safelist: [
-		{
-			pattern: /(text|bg)-(black|white|primary|gray|gray-700|primary-50|primary-600|red|red-50|green-50|green-700|neon|neon-800)/,
-		},
-	],
+
+- `@import "tailwindcss"` - Loads Tailwind base, components, and utilities
+- `@source` - Tells Tailwind where to scan for class usage (JIT compilation)
+
+### Theme Colors
+
+Colors are defined in `src/css/ui/colors.css` using OKLCH format with light/dark variants:
+
+```css
+@theme {
+  --color-primary-light: oklch(0.85 0.10 259.81);
+  --color-primary-dark: oklch(0.35 0.15 259.81);
+  --color-success: oklch(0.60 0.15 145);
+  /* etc. */
 }
 ```
 
-### ACF Fields:
+The `@theme` directive registers CSS variables as Tailwind utilities (e.g., `bg-primary-light`, `text-success`).
 
-In `acf-blocks.php`:
+### Basecoat UI
 
-```
-add_filter('acf/load_field/name=color_light', function ($field) {
-	$field['choices'] = [
-		'default' => 'Default',
-		'white' => 'White',
-		'gray' => 'Gray',
-		'red-50' => 'Red',
-		'green-50' => 'Green',
-		'primary-50' => 'Blue',
-		'neon' => 'Neon',
-	];
-	return $field;
-});
+This theme uses [Basecoat UI](https://basecoatui.com) for components. Theme customization is in:
+- `src/css/basecoat-theme.css` - Generated theme from [tweakcn.com](https://tweakcn.com)
+- `src/css/theme.css` - Custom overrides
 
-add_filter('acf/load_field/name=color_dark', function ($field) {
-	$field['choices'] = [
-		'default' => 'Default',
-		'black' => 'Black',
-		'gray-700' => 'Gray',
-		'red' => 'Red',
-		'green-700' => 'Green',
-		'primary' => 'Blue',
-		'neon-800' => 'Neon',
-	];
-	return $field;
+## Colors
+
+### Defining Colors for ACF Fields
+
+To add color choices to ACF select fields, use filters in `functions/acf-blocks.php`:
+
+```php
+add_filter('acf/load_field/name=background_color', function ($field) {
+    $field['choices'] = [
+        'default' => 'Default',
+        'primary-light' => 'Primary Light',
+        'primary-dark' => 'Primary Dark',
+        'neutral-light' => 'Neutral Light',
+    ];
+    return $field;
 });
 ```
 
