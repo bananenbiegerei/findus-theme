@@ -1,0 +1,46 @@
+/* Color light/dark variants based on basecoat-theme.css */
+/* Light = higher lightness, Dark = lower lightness in oklch */
+
+@theme {
+  --color-black: oklch(0.21 0 0);
+  --color-white: oklch(1 0 0);
+  /* Primary (Blue) - base: oklch(0.6231 0.1880 259.8145) */
+  --color-primary-light: oklch(0.85 0.10 259.81);
+  --color-primary-dark: oklch(0.35 0.15 259.81);
+
+  /* Secondary - base: oklch(0.9670 0.0029 264.5419) - very light gray-blue */
+  --color-secondary-light: oklch(0.98 0.002 264.54);
+  --color-secondary-dark: oklch(0.45 0.02 264.54);
+
+  /* Accent - base: oklch(0.9514 0.0250 236.8242) - light cyan */
+  --color-accent-light: oklch(0.97 0.015 236.82);
+  --color-accent-dark: oklch(0.40 0.12 236.82);
+
+  /* Destructive (Red) - base: oklch(0.6368 0.2078 25.3313) */
+  --color-destructive-light: oklch(0.85 0.12 25.33);
+  --color-destructive-dark: oklch(0.40 0.18 25.33);
+
+  /* Muted - base: oklch(0.9846 0.0017 247.8389) */
+  --color-muted-light: oklch(0.99 0.001 247.84);
+  --color-muted-dark: oklch(0.50 0.015 247.84);
+
+  /* Neutral (Gray) */
+  --color-neutral: oklch(0.55 0 0);
+  --color-neutral-light: oklch(0.85 0 0);
+  --color-neutral-dark: oklch(0.25 0 0);
+
+  /* Success (Green) */
+  --color-success: oklch(0.60 0.15 145);
+  --color-success-light: oklch(0.85 0.10 145);
+  --color-success-dark: oklch(0.35 0.12 145);
+
+  /* Warning (Yellow/Orange) */
+  --color-warning: oklch(0.75 0.15 85);
+  --color-warning-light: oklch(0.90 0.10 85);
+  --color-warning-dark: oklch(0.50 0.12 85);
+
+  /* Error (Red - similar to destructive but semantic) */
+  --color-error: oklch(0.63 0.21 25);
+  --color-error-light: oklch(0.85 0.12 25);
+  --color-error-dark: oklch(0.40 0.18 25);
+}

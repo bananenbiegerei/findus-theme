@@ -1,0 +1,45 @@
+{
+	"main": "webpack.mix.js",
+	"license": "MIT",
+	"name": "bb-tailwind",
+	"version": "1.0.0",
+	"private": true,
+	"prettier": {
+		"printWidth": 200,
+		"useTabs": true,
+		"phpVersion": "8.0",
+		"singleQuote": true,
+		"jsxSingleQuote": true
+	},
+	"devDependencies": {
+		"@prettier/plugin-php": "^0.22.0",
+		"@tailwindcss/postcss": "^4.0.0",
+		"alpinejs": "^3.9.0",
+		"browser-sync": "^2.26.14",
+		"browser-sync-webpack-plugin": "^2.3.0",
+		"cssnano": "^5.1.13",
+		"dotenv": "^16.0.1",
+		"gulp": "^4.0.2",
+		"gulp-esbuild": "^0.10.2",
+		"gulp-postcss": "^9.0.1",
+		"gulp-sourcemaps": "^3.0.0",
+		"postcss-cli": "^10.1.0",
+		"prettier": "^3.0.0",
+		"prettier-plugin-tailwindcss": "^0.6.0",
+		"tailwindcss": "^4.0.0",
+		"tslib": "^2.4.1",
+		"webpack": "^5.77.0",
+		"webpack-stream": "^7.0.0"
+	},
+	"scripts": {
+		"start": "gulp",
+		"dev": "gulp",
+		"watch": "gulp",
+		"build": "gulp build"
+	},
+	"dependencies": {
+		"basecoat-css": "^0.3.10",
+		"jquery": "^3.5.1",
+		"swiper": "^7.4.1"
+	}
+}

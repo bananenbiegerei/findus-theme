@@ -1,0 +1,10 @@
+ul.language-switcher {
+	li {
+		&.current-lang {
+			@apply hidden;
+		}
+		a {
+			@apply uppercase text-primary;
+		}
+	}
+}

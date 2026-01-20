@@ -1,0 +1,7 @@
+/node_modules/
+/dist/
+/.nova/
+/.env
+/js/
+/css/
+.DS_Store

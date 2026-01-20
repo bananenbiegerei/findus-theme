@@ -1,0 +1,48 @@
+.cmplz-cookiebanner {
+    @apply bg-primary! text-secondary! text-xs! font-normal! p-3! border-none! left-6! lg:left-10! translate-x-0! min-w-[200px]! shadow-none! z-40! rounded-none! bottom-[285px]! lg:bottom-[315px]! h-36! max-h-fit!;
+    a {
+        @apply text-secondary;
+    }
+    .cmplz-header {
+        @apply block!;
+        .cmplz-title {
+            @apply block! text-white! text-xs! font-normal!;
+        }
+    }
+    .cmplz-message {
+        @apply text-secondary! text-xs! leading-none! w-full!;
+    }
+    .cmplz-buttons {
+        @apply flex-row!;
+        .cc-btn {
+            @apply flex-none! bg-primary! text-xs! px-0! py-0! rounded-none! border-none! text-secondary! font-normal! m-0! leading-none! h-[20px]! min-h-[20px]! w-auto!;
+        }
+    }
+    .cmplz-documents {
+        @apply sr-only;
+    }
+    .cmplz-body {
+        @apply text-secondary! w-auto! min-w-[10px]!;
+    }
+    .cmplz-categories {
+        @apply mb-3! w-[260px]!;
+        .cmplz-category {
+            @apply bg-secondary! text-primary! text-xs!;
+            .cmplz-category-header {
+                @apply py-2!;
+                .cmplz-always-active {
+                    @apply text-primary! text-xs! font-bold!;
+                }
+                .cmplz-icon {
+                    @apply fill-primary!;
+                }
+                .cmplz-category-title {
+                    @apply text-primary! text-xs!;
+                }
+            }
+            .cmplz-description {
+                @apply text-primary! text-xs!;
+            }
+        }
+    }
+}
