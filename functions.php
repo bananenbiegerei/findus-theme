@@ -33,6 +33,9 @@ require_once get_template_directory() . '/functions/custom-taxonomies.php';
 // Excerpts
 require_once get_template_directory() . '/functions/excerpts.php';
 
+// Disable comments
+require_once get_template_directory() . '/functions/comments.php';
+
 // Block converter and unsupported blocks
 //require_once get_template_directory() . '/functions/block-converter.php';
 
