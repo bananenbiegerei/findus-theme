@@ -24,8 +24,9 @@ add_action('wp_enqueue_scripts', function () {
     }
 
     // Allow easy editing of post with `CTRL-E`
-    if (current_user_can('edit_post') && get_the_ID()) {
-        $post_edit_url = get_edit_post_link(get_the_ID(), '&');
+    $post_id = get_the_ID();
+    if ($post_id && current_user_can('edit_post', $post_id)) {
+        $post_edit_url = get_edit_post_link($post_id, '&');
         if ($post_edit_url) {
             $script = <<<EOF
 var postEditURL = "$post_edit_url";
