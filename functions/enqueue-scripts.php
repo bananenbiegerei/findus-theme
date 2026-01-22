@@ -11,6 +11,14 @@ function get_asset_version($file_path)
     return '1.0.0';
 }
 
+// Editor styles (Gutenberg block editor)
+add_action('enqueue_block_editor_assets', function () {
+    $css_file = get_template_directory() . '/css/editor.css';
+    if (file_exists($css_file)) {
+        wp_enqueue_style('bb-editor', get_template_directory_uri() . '/css/editor.css', [], get_asset_version($css_file));
+    }
+});
+
 // Site scripts and style
 add_action('wp_enqueue_scripts', function () {
     $js_file = get_template_directory() . '/js/site.js';

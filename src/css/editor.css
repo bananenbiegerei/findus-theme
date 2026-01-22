@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+/* Safelist for dynamic color classes */
+@source "./safelist.html";
+
+/* Load before basecoat etc. */
+/* UI Basic components, custom made by BB */
+@import './ui/fonts.css';
+@import './ui/colors.css';
+
+@import "basecoat-css";
+@import "./basecoat-theme";
+@import "./theme";
+
+/* BB Blocks */
+@import "../../bb-blocks/bb-block-image/style.css";
+@import "../../bb-blocks/bb-block-gallery-swiper/style.css";
+
+/* Editor-specific styles */
+.block-editor-writing-flow {
+	.hide-for-editor {
+		display: none;
+	}
+	@apply overflow-hidden p-0 font-sans font-normal;
+
+	.wp-block-group {
+		border: dotted 1px grey;
+	}
+
+	.wp-block,
+	.wp-block-post-title {
+		@apply container px-0;
+		&.has-background {
+			@apply px-6 py-10;
+		}
+	}
+	.wp-block {
+		@apply py-0.5;
+	}
+	.wp-block.wp-block-group.has-background {
+		@apply my-0 px-6;
+	}
+	.wp-block-acf-stroke {
+		max-width: 100%;
+		svg {
+			height: auto;
+			width: 100%;
+		}
+	}
+	.card {
+		@apply mt-0;
+	}
+	.swiper-wrapper {
+		@apply grid grid-cols-4 gap-5;
+	}
+}

@@ -6,10 +6,12 @@
 }
 /* referring to classes in containers.php */
 .outer-container {
-	@apply grid grid-cols-12 container;
+	@apply grid grid-cols-12 max-w-screen-2xl mx-auto px-6;
+	/* @apply container not working */
 }
 .default {
-	@apply col-span-12 lg:col-span-8 lg:col-start-3;
+	/* @apply col-span-12 lg:col-span-8 lg:col-start-3; */
+	@apply col-span-12;
 }
 .wide {
 	@apply col-span-12;
