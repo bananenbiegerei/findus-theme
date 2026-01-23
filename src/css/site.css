@@ -11,3 +11,12 @@
 @import "basecoat-css";
 @import "./basecoat-theme";
 @import "./theme";
+
+/* Swiper */
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
+/* BB Blocks */
+@import "../../bb-blocks/bb-block-image/style.css";
+@import "../../bb-blocks/bb-block-gallery-swiper/style.css";

@@ -2,10 +2,8 @@
 <?php while (have_posts()):
 	the_post(); ?>
 	<div class="container">
-		<div class="max-w-4xl">
-			<h1><?php the_title(); ?></h1>
-			<?php bb_render_components(); ?>
-		</div>
+		<h1><?php the_title(); ?></h1>tes6t
+		<?php bb_render_components(); ?>
 	</div>
 <?php
 endwhile; ?>

@@ -10,7 +10,7 @@ const gulpEsbuildIncremental = createGulpEsbuild({ incremental: true });
 const browserSync = require('browser-sync').create();
 
 function stylesDev() {
-	return src('./src/css/site.css')
+	return src(['./src/css/site.css', './src/css/editor.css'])
 		.pipe(sourcemaps.init())
 		.pipe(postcss([tailwindcss()]))
 		.pipe(sourcemaps.write('.'))
@@ -19,7 +19,7 @@ function stylesDev() {
 }
 
 function stylesProd() {
-	return src('./src/css/site.css')
+	return src(['./src/css/site.css', './src/css/editor.css'])
 		.pipe(postcss([tailwindcss(), cssnano({ preset: ['default', { calc: false }] })]))
 		.pipe(dest('./css'));
 }
@@ -56,8 +56,8 @@ function dev() {
 		proxy: process.env.BROWSERSYNC_PROXY_URL,
 		open: process.env.BROWSERSYNC_OPEN_BROWSER == 'true',
 	});
-	watch('./src/css/**/*.css', stylesDev);
-	watch('./src/js/**/*.js', esbuildDev).on('change', browserSync.reload);
+	watch(['./src/css/**/*.css', './bb-blocks/**/*.css'], stylesDev);
+	watch(['./src/js/**/*.js', './bb-blocks/**/*.js'], esbuildDev).on('change', browserSync.reload);
 	watch('./**/*.php', stylesDev).on('change', browserSync.reload);
 	watch(['./img/**/*.*', './fonts/**/*.*']).on('change', browserSync.reload);
 }

@@ -1,12 +1,3 @@
 <?php get_header(); ?>
-<?php while (have_posts()):
-	the_post(); ?>
-	<div class="container">
-		<div class="max-w-4xl">
-			<h1 class="sr-only"><?php the_title(); ?></h1>
-			<?php bb_render_components(); ?>
-		</div>
-	</div>
-<?php
-endwhile; ?>
+<?php the_content(); ?>
 <?php get_footer(); ?>
