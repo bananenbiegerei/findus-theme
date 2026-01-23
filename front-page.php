@@ -1,9 +1,12 @@
 <?php get_header(); ?>
-<div class="container">
-    <?php get_template_part("template-parts/style-tile/typography"); ?>
-    <?php get_template_part("template-parts/style-tile/typography"); ?>
-    <?php get_template_part("template-parts/style-tile/buttons"); ?>
-
-    <?php get_template_part("template-parts/style-tile/colors"); ?>
-</div>
+<?php while (have_posts()):
+	the_post(); ?>
+	<div class="container">
+		<div class="max-w-4xl">
+			<h1 class="sr-only"><?php the_title(); ?></h1>
+			<?php bb_render_components(); ?>
+		</div>
+	</div>
+<?php
+endwhile; ?>
 <?php get_footer(); ?>
