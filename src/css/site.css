@@ -19,5 +19,6 @@
 
 /* BB Blocks */
 @import "../../bb-blocks/bb-block-button/style.css";
+@import "../../bb-blocks/bb-block-group/style.css";
 @import "../../bb-blocks/bb-block-image/style.css";
 @import "../../bb-blocks/bb-block-gallery-swiper/style.css";
