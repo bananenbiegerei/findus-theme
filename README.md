@@ -135,11 +135,52 @@ Go to wordpress instance -> themes. Mark the theme and check for updates. Then u
 
 _Do not manually upload files to the live server. Install the theme in the backend with the zipfile (unless it's for an emergency fix)._
 
+## Upstream (bb-starter-theme)
+
+This theme uses [bb-starter-theme](https://github.com/bananenbiegerei/bb-starter-theme) as an upstream template. Changes from upstream can be merged into this theme.
+
+### Initial setup (once)
+
+```bash
+git remote add upstream https://github.com/bananenbiegerei/bb-starter-theme.git
+```
+
+### Pull changes from upstream
+
+```bash
+git fetch upstream
+git merge upstream/main --allow-unrelated-histories
+```
+
+After merging, update submodules to match the upstream references:
+
+```bash
+git submodule update --init --recursive
+```
+
+### Update submodules to latest
+
+```bash
+# Update all submodules to latest remote commit
+git submodule update --remote
+
+# Or update a specific one
+git submodule update --remote bb-blocks
+```
+
+After updating submodules, commit the new reference:
+
+```bash
+git add bb-blocks bb-components
+git commit -m "Update submodules"
+```
+
 ## Fork for BB Starter Theme projects
 
-To recycle the bb theme for different projects you can for the bb theme.
+To recycle the bb theme for different projects you can fork the bb theme.
 
-1. Fork the main repo: got to github and fork there
+1. Fork the main repo: go to github and fork there
 2. Clone the forked repo
-3. Install blocks submodule: ``` git submodule update --init --recursive ```
-4. Cleanup unecessary file
+3. Install blocks submodule: `git submodule update --init --recursive`
+4. Add upstream remote: `git remote add upstream https://github.com/bananenbiegerei/bb-starter-theme.git`
+5. Cleanup unnecessary files
