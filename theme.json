@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"settings": {
+		"color": {
+			"palette": [
+				{ "slug": "primary", "color": "#ff692a", "name": "Orange" },
+				{ "slug": "primary-100", "color": "#ffe6d4", "name": "Orange Extra Light" },
+				{ "slug": "primary-200", "color": "#ffcaa8", "name": "Orange Light" },
+				{ "slug": "primary-700", "color": "#c62208", "name": "Orange Dark" },
+				{ "slug": "secondary", "color": "#ffa620", "name": "Yellow" },
+				{ "slug": "secondary-100", "color": "#ffedc6", "name": "Yellow Extra Light" },
+				{ "slug": "secondary-200", "color": "#ffd988", "name": "Yellow Light" },
+				{ "slug": "secondary-700", "color": "#b73e06", "name": "Yellow Dark" },
+				{ "slug": "tertiary", "color": "#3e88b9", "name": "Blue" },
+				{ "slug": "tertiary-100", "color": "#e7f0f7", "name": "Blue Extra Light" },
+				{ "slug": "tertiary-200", "color": "#c9deee", "name": "Blue Light" },
+				{ "slug": "tertiary-700", "color": "#26577e", "name": "Blue Dark" },
+				{ "slug": "quaternary", "color": "#1d97bd", "name": "Cyan" },
+				{ "slug": "quaternary-100", "color": "#d4f3f9", "name": "Cyan Extra Light" },
+				{ "slug": "quaternary-200", "color": "#afe5f2", "name": "Cyan Light" },
+				{ "slug": "quaternary-700", "color": "#1d6381", "name": "Cyan Dark" },
+				{ "slug": "black", "color": "#000000", "name": "Black" },
+				{ "slug": "white", "color": "#ffffff", "name": "White" }
+			]
+		}
+	}
+}

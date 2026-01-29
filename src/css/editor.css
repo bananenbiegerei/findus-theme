@@ -18,7 +18,8 @@
 @import "../../bb-blocks/bb-block-gallery-swiper/style.css";
 
 /* Editor-specific styles */
-.block-editor-writing-flow {
+.editor-styles-wrapper {
+	@apply !container !mx-auto !px-4;
 	.hide-for-editor {
 		display: none;
 	}

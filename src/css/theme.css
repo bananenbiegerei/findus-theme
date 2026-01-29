@@ -31,3 +31,8 @@
   box-shadow: none;
 }
 
+.dialog  {
+  > * {
+    @apply container;
+  }
+}

@@ -8,7 +8,7 @@
 		<div class="w-1/4">
 			<?php
 			if ( has_post_thumbnail() ) { ?>
-				<div class="aspect-w-16 aspect-h-9 mb-4 bg-red-500">
+				<div class="aspect-w-16 aspect-h-9 mb-4">
 					<?php the_post_thumbnail('large', array('class' => 'object-fit object-cover')); ?>
 				</div>
 			<?php }

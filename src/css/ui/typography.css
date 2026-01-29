@@ -1,4 +1,3 @@
-/* some old articles are styled with strong tag */
 h1,
 h2,
 h3,
@@ -37,7 +36,7 @@ h6 {
 	p,
 	ul:not([class]),
 	ol:not([class]) {
-		@apply mb-6 max-w-4xl text-lg leading-normal lg:text-xl;
+		@apply mb-6 max-w-4xl text-lg leading-tight lg:text-xl;
 	}
 }
 
@@ -48,6 +47,10 @@ h6 {
 	a.link {
 		@apply underline decoration-1 underline-offset-2 transition hover:text-primary/70;
 	}
+}
+/* Strange thing coming from WP */
+a:where(:not(.wp-element-button)) {
+	@apply no-underline;
 }
 
 /* Make the paragraphs inside a block inherit typography

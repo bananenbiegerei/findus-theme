@@ -15,6 +15,16 @@ window.EffectFade = EffectFade;
 
 // Swiper styles loaded via CSS (src/css/site.css)
 
+// Set fixed aspect ratio on .wp-block-columns via explicit height
+function applyColumnsAspectRatio() {
+	const ratio = 1.414 / 1;
+	document.querySelectorAll('.xxwp-block-group-is-layout-grid').forEach((el) => {
+		el.style.height = el.offsetWidth / ratio + 'px';
+	});
+}
+applyColumnsAspectRatio();
+window.addEventListener('resize', applyColumnsAspectRatio);
+
 // Init Alpine
 window.Alpine = Alpine;
 Alpine.plugin(focus);

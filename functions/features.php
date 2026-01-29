@@ -29,6 +29,9 @@ add_theme_support('title-tag');
 // Support for post thumbnails
 add_theme_support('post-thumbnails', ['post', 'page']);
 
+// Enable excerpts for pages
+add_post_type_support('page', 'excerpt');
+
 // Set custom excerpt length
 add_filter(
 	'excerpt_length',
