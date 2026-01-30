@@ -7,6 +7,7 @@
 /* UI Basic components, custom made by BB */
 @import './ui/fonts.css';
 @import './ui/colors.css';
+@import './ui/typography.css';
 
 @import "basecoat-css";
 @import "./basecoat-theme";
@@ -49,10 +50,57 @@
 			width: 100%;
 		}
 	}
-	.card {
-		@apply mt-0;
-	}
 	.swiper-wrapper {
 		@apply grid grid-cols-4 gap-5;
+	}
+	/* Typography Overwrites - repeat from typography.css with higher specificity */
+	h1, h2, h3, h4, h5, h6 {
+		@apply mb-2 font-medium leading-tight mt-0;
+	}
+	h1, .h1 {
+		@apply lg:text-5xl text-2xl;
+	}
+	h2, .h2 {
+		@apply text-2xl lg:text-3xl;
+	}
+	h3, .h3 {
+		@apply text-xl lg:text-2xl;
+	}
+	h4, .h4 {
+		@apply text-lg lg:text-xl;
+	}
+	h5, .h5 {
+		@apply text-base lg:text-lg;
+	}
+	h6, .h6 {
+		@apply text-sm lg:text-base;
+	}
+	p, ul:not([class]), ol:not([class]) {
+		@apply mb-6 max-w-4xl text-lg leading-tight lg:text-xl mt-0;
+	}
+}
+
+/* ACF Columns Block - Display repeater rows as visual columns (first level only) */
+.acf-field-697b60b225af3 > .acf-input > .acf-repeater:first-child > .acf-table:first-of-type {
+	@apply flex flex-row;
+
+	> thead {
+		@apply hidden;
+	}
+
+	> tbody {
+		@apply flex flex-row gap-2 w-full;
+
+		> tr.acf-row {
+			@apply flex flex-col flex-1 border border-gray-300 bg-gray-100 rounded;
+
+			> td {
+				@apply block w-full! border-none;
+
+				&.acf-row-handle {
+					@apply order-first text-center p-2 bg-gray-200 rounded-t;
+				}
+			}
+		}
 	}
 }
