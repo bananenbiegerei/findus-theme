@@ -135,16 +135,16 @@
                             "min": "",
                             "max": ""
                         },
-                        "layout_697b8dialog05": {
-                            "key": "layout_697b8dialog05",
-                            "name": "dialog",
-                            "label": "Dialog",
+                        "layout_697cablockquote05": {
+                            "key": "layout_697cablockquote05",
+                            "name": "blockquote",
+                            "label": "Blockquote",
                             "display": "block",
                             "sub_fields": [
                                 {
-                                    "key": "field_697b8dialog06",
-                                    "label": "Dialog",
-                                    "name": "dialog",
+                                    "key": "field_697cablockquote06",
+                                    "label": "Blockquote",
+                                    "name": "blockquote",
                                     "aria-label": "",
                                     "type": "clone",
                                     "instructions": "",
@@ -156,7 +156,7 @@
                                         "id": ""
                                     },
                                     "clone": [
-                                        "group_697b8cab866c6"
+                                        "group_632dac8eb77a5"
                                     ],
                                     "display": "seamless",
                                     "layout": "block",
@@ -200,5 +200,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1769698225
+    "modified": 1769779248
 }
