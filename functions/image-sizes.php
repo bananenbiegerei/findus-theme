@@ -35,18 +35,28 @@ add_image_size('six-columns-three-four', $six_columns, $six_columns_three_four_s
 add_image_size('two-columns-three-four', $two_columns, $two_columns_three_four_short_side, true);
 
 /* Minimum Upload Sizes */
-//add_filter('wp_handle_upload_prefilter','tc_handle_upload_prefilter');
+// Minimum dimensions to support six-columns-three-four (720x960) crop
+add_filter('wp_handle_upload_prefilter', 'tc_handle_upload_prefilter');
 function tc_handle_upload_prefilter($file)
 {
+	// Only check image files
+	if (strpos($file['type'], 'image') === false) {
+		return $file;
+	}
+
 	$img = getimagesize($file['tmp_name']);
-	$minimum = ['width' => '800', 'height' => '600'];
+	if (!$img) {
+		return $file;
+	}
+
+	$minimum = ['width' => 720, 'height' => 960];
 	$width = $img[0];
 	$height = $img[1];
 
 	if ($width < $minimum['width']) {
-		return ['error' => "Image dimensions are too small. Minimum width is {$minimum['width']}px. Uploaded image width is $width px"];
+		return ['error' => "Image dimensions are too small. Minimum width is {$minimum['width']}px. Uploaded image width is {$width}px"];
 	} elseif ($height < $minimum['height']) {
-		return ['error' => "Image dimensions are too small. Minimum height is {$minimum['height']}px. Uploaded image height is $height px"];
+		return ['error' => "Image dimensions are too small. Minimum height is {$minimum['height']}px. Uploaded image height is {$height}px"];
 	} else {
 		return $file;
 	}

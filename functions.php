@@ -26,6 +26,9 @@ require_once get_template_directory() . '/functions/menu.php';
 // Icon dispenser
 require_once get_template_directory() . '/functions/icons.php';
 
+// Image Sizes
+require_once get_template_directory() . '/functions/image-sizes.php';
+
 // Custom posts and taxonomies
 // require_once get_template_directory() . '/functions/custom-posts.php';
 // require_once get_template_directory() . '/functions/custom-taxonomies.php';
