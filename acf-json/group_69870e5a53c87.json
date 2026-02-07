@@ -1,0 +1,114 @@
+{
+    "key": "group_69870e5a53c87",
+    "title": "Clone Library",
+    "fields": [
+        {
+            "key": "field_69870e5a14224",
+            "label": "",
+            "name": "",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6979efb3a1889",
+            "label": "Aspect Ratio",
+            "name": "aspect_ratio",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "aspect-3\/4": "Portrait (3:4)",
+                "aspect-4\/3": "Landscape (4:3)"
+            },
+            "default_value": "aspect-3\/4 : Portrait",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_697a0007card7",
+            "label": "Background Color",
+            "name": "background_color",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "primary-400 dark:bg-primary-800": "Orange Dark",
+                "primary-300 dark:bg-primary-700": "Orange",
+                "primary-200 dark:bg-primary-600": "Orange Light",
+                "primary-100 dark:bg-primary-500": "Orange Extra Light",
+                "secondary-400 dark:bg-secondary-800": "Yellow Dark",
+                "secondary-300 dark:bg-secondary-700": "Yellow",
+                "secondary-200 dark:bg-secondary-600": "Yellow Light",
+                "secondary-100 dark:bg-secondary-500": "Yellow Extra Light",
+                "tertiary-400 dark:bg-tertiary-800": "Blue Dark",
+                "tertiary-300 dark:bg-tertiary-700": "Blue",
+                "tertiary-200 dark:bg-tertiary-600": "Blue Light",
+                "tertiary-100 dark:bg-tertiary-500": "Blue Extra Light",
+                "quaternary-400 dark:bg-quaternary-800": "Cyan Dark",
+                "quaternary-300 dark:bg-quaternary-700": "Cyan",
+                "quaternary-200 dark:bg-quaternary-600": "Cyan Light",
+                "quaternary-100 dark:bg-quaternary-500": "Cyan Extra Light"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "modified": 1770458726
+}
