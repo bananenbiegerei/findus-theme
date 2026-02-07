@@ -1,9 +1,9 @@
 .container {
-	@apply max-w-screen-2xl mx-auto px-6;
+	@apply max-w-screen-2xl mx-auto px-2 md:px-4;
 }
 /* referring to classes in containers.php */
 .outer-container {
-	@apply max-w-screen-2xl mx-auto px-6 mb-1;
+	@apply max-w-screen-2xl mx-auto px-2 md:px-4 mb-2;
 	/* @apply container not working */
 }
 .default {
