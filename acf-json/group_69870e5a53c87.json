@@ -20,7 +20,7 @@
                 "aspect-[1\/1.4141]": "Portrait",
                 "aspect-[1.4141\/1]": "Landscape"
             },
-            "default_value": "aspect-[1\/1.4141] : Portrait",
+            "default_value": "aspect-[1\/1.4141]",
             "return_format": "value",
             "allow_null": 0,
             "allow_in_bindings": 0,
@@ -70,15 +70,7 @@
             "save_options": 0
         }
     ],
-    "location": [
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "post"
-            }
-        ]
-    ],
+    "location": [],
     "menu_order": 0,
     "position": "normal",
     "style": "default",

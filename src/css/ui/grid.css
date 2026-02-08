@@ -3,7 +3,7 @@
 }
 /* referring to classes in containers.php */
 .outer-container {
-	@apply max-w-screen-2xl mx-auto px-2 mb-1;
+	@apply max-w-screen-2xl mx-auto px-2 mb-2;
 	/* @apply container not working */
 }
 .default {
