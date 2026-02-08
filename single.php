@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="container">
 	<h1><?php the_title(); ?></h1>
-	<div class="lg:flex gap-8">
+	<div class="lg:flex gap-2">
 		<div class="lg:w-3/4">
 			<?php bb_render_components(); ?>
 		</div>

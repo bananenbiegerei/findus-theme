@@ -10,3 +10,15 @@
 	/* @apply col-span-12 lg:col-span-8 lg:col-start-3; */
 	/* @apply col-span-12; */
 }
+
+/* .bb-row {
+	@apply bg-red-300;
+	[class^="bb-block-"] {
+		@apply aspect-auto h-full;
+	}
+	.bb-block-image {
+		img {
+			@apply opacity-25 object-cover h-full w-full;
+		}
+	}
+} */

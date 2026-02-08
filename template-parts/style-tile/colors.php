@@ -1,4 +1,4 @@
-<div class="grid grid-cols-4 gap-8 my-12"
+<div class="grid grid-cols-4 gap-2 my-12"
     x-data="{
         colors: [
             { name: 'background', hasForeground: true },
