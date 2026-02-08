@@ -3,27 +3,6 @@
     "title": "Clone Library",
     "fields": [
         {
-            "key": "field_69870e5a14224",
-            "label": "",
-            "name": "",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_6979efb3a1889",
             "label": "Aspect Ratio",
             "name": "aspect_ratio",
@@ -38,10 +17,10 @@
                 "id": ""
             },
             "choices": {
-                "aspect-3\/4": "Portrait (3:4)",
-                "aspect-4\/3": "Landscape (4:3)"
+                "aspect-[1\/1.4141]": "Portrait",
+                "aspect-[1.4141\/1]": "Landscape"
             },
-            "default_value": "aspect-3\/4 : Portrait",
+            "default_value": "aspect-[1\/1.4141] : Portrait",
             "return_format": "value",
             "allow_null": 0,
             "allow_in_bindings": 0,
@@ -91,7 +70,15 @@
             "save_options": 0
         }
     ],
-    "location": [],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
     "menu_order": 0,
     "position": "normal",
     "style": "default",
@@ -102,5 +89,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1770458726
+    "modified": 1770565731
 }

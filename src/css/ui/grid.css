@@ -1,9 +1,9 @@
 .container {
-	@apply max-w-screen-2xl mx-auto px-6;
+	@apply max-w-screen-2xl mx-auto px-2;
 }
 /* referring to classes in containers.php */
 .outer-container {
-	@apply max-w-screen-2xl mx-auto px-6 mb-1;
+	@apply max-w-screen-2xl mx-auto px-2 mb-1;
 	/* @apply container not working */
 }
 .default {
@@ -11,14 +11,13 @@
 	/* @apply col-span-12; */
 }
 
-/* .bb-row {
-	@apply bg-red-300;
+.bb-row {
 	[class^="bb-block-"] {
 		@apply aspect-auto h-full;
 	}
-	.bb-block-image {
+	/* .bb-block-image {
 		img {
 			@apply opacity-25 object-cover h-full w-full;
 		}
-	}
-} */
+	} */
+}
