@@ -1,0 +1,14 @@
+/* Custom Tailwind utilities */
+
+/* DIN aspect ratios (based on √2 ratio used in A-series paper sizes) */
+@utility aspect-din-portrait {
+    aspect-ratio: 1 / 1.4142;
+}
+
+@utility aspect-din-landscape {
+    aspect-ratio: 1.4142 / 1;
+}
+
+@utility aspect-din-panorama {
+    aspect-ratio: 1 / 0.4142;
+}
