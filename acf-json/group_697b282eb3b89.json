@@ -1,6 +1,6 @@
 {
     "key": "group_697b282eb3b89",
-    "title": "Template: Page",
+    "title": "Template: Page + Referenzen",
     "fields": [
         {
             "key": "field_697b282e7092e",
@@ -41,6 +41,13 @@
                 "operator": "==",
                 "value": "page"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "referenz"
+            }
         ]
     ],
     "menu_order": 0,
@@ -53,5 +60,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1769800127
+    "modified": 1770631661
 }

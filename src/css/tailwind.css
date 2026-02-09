@@ -1,3 +1,9 @@
 @import "tailwindcss";
 @source "../../**/*.php";
 @source "../../bb-blocks/**/*.php";
+
+@theme {
+    --aspect-din-portrait: 1 / 1.4142;
+    --aspect-din-landscape: 1.4142 / 1;
+    --aspect-din-panorama: 1 / 0.4142;
+}
