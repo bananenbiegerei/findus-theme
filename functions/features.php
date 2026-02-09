@@ -27,10 +27,11 @@ show_admin_bar(false);
 add_theme_support('title-tag');
 
 // Support for post thumbnails
-add_theme_support('post-thumbnails', ['post', 'page']);
+add_theme_support('post-thumbnails', ['post', 'page', 'referenz']);
 
-// Enable excerpts for pages
+// Enable excerpts for pages and referenz
 add_post_type_support('page', 'excerpt');
+add_post_type_support('referenz', 'excerpt');
 
 // Set custom excerpt length
 add_filter(
