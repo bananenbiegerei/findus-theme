@@ -21,7 +21,7 @@
                 "aspect-din-landscape": "Landscape",
                 "aspect-din-panorama": "Panorama"
             },
-            "default_value": "aspect-din-portrait",
+            "default_value": "aspect-din-portrait : Portrait",
             "return_format": "value",
             "allow_null": 0,
             "allow_in_bindings": 0,
@@ -69,6 +69,37 @@
             "placeholder": "",
             "create_options": 0,
             "save_options": 0
+        },
+        {
+            "key": "field_698a34e408b16",
+            "label": "Color Scheme",
+            "name": "color_scheme",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "primary": "Orange",
+                "secondary": "Yellow",
+                "tertiary": "Blue",
+                "quaternary": "Cyan"
+            },
+            "default_value": "primary",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         }
     ],
     "location": [
@@ -90,5 +121,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1770565731
+    "modified": 1770716633
 }
