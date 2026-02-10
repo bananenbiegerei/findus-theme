@@ -21,7 +21,7 @@
                 "aspect-din-landscape": "Landscape",
                 "aspect-din-panorama": "Panorama"
             },
-            "default_value": "aspect-din-portrait : Portrait",
+            "default_value": "aspect-din-portrait",
             "return_format": "value",
             "allow_null": 0,
             "allow_in_bindings": 0,

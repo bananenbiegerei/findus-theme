@@ -20,6 +20,10 @@
 @import "swiper/css/navigation";
 @import "swiper/css/pagination";
 
+/* Plyr video player */
+@import "plyr/dist/plyr.css";
+
 /* BB Blocks */
 @import "../../bb-blocks/bb-block-image/style.css";
 @import "../../bb-blocks/bb-block-gallery-swiper/style.css";
+@import "../../bb-blocks/bb-block-video/style.css";

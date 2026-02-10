@@ -6,12 +6,18 @@ import focus from '@alpinejs/focus';
 import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper';
 
+// Plyr video player
+import Plyr from 'plyr';
+
 // Make Swiper available globally for block scripts
 window.Swiper = Swiper;
 window.Navigation = Navigation;
 window.Pagination = Pagination;
 window.Autoplay = Autoplay;
 window.EffectFade = EffectFade;
+
+// Make Plyr available globally for block scripts
+window.Plyr = Plyr;
 
 // Swiper styles loaded via CSS (src/css/site.css)
 

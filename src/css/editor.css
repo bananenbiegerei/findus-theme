@@ -3,6 +3,9 @@
 /* Safelist for dynamic color classes */
 @source "./safelist.html";
 
+/* Custom Tailwind utilities (aspect ratios, etc.) */
+@import './custom-tailwind.css';
+
 /* Load before basecoat etc. */
 /* UI Basic components, custom made by BB */
 @import './ui/fonts.css';

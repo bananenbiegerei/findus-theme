@@ -1,12 +1,13 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	@apply mb-2 font-medium leading-tight;
-}
 @layer base {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply mb-2 font-medium leading-tight;
+	}
+
 	h1,
 	.h1 {
 		@apply lg:text-5xl text-2xl;
@@ -31,12 +32,11 @@ h6 {
 	.h6 {
 		@apply text-sm lg:text-base;
 	}
-}
-@layer base {
+
 	p,
 	ul:not([class]),
 	ol:not([class]) {
-		@apply mb-6 max-w-4xl text-lg leading-tight lg:text-xl;
+		@apply mb-6 max-w-6xl text-lg leading-tight lg:text-xl;
 	}
 }
 
