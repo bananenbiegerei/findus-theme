@@ -17,12 +17,12 @@
                 "id": ""
             },
             "choices": {
-                "primary-300 dark:bg-primary-700": "Orange",
-                "secondary-300 dark:bg-secondary-700": "Yellow",
-                "tertiary-300 dark:bg-tertiary-700": "Blue",
-                "quaternary-300 dark:bg-quaternary-700": "Cyan"
+                "primary": "Orange",
+                "secondary": "Yellow",
+                "tertiary": "Blue",
+                "quaternary": "Cyan"
             },
-            "default_value": "primary-300 dark:bg-primary-700",
+            "default_value": "primary",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -60,5 +60,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1770634638
+    "modified": 1771255012
 }

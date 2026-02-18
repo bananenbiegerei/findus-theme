@@ -21,7 +21,7 @@
                 "aspect-din-landscape": "Landscape",
                 "aspect-din-panorama": "Panorama"
             },
-            "default_value": "aspect-din-portrait",
+            "default_value": "aspect-din-portrait : Portrait",
             "return_format": "value",
             "allow_null": 0,
             "allow_in_bindings": 0,
@@ -42,24 +42,24 @@
                 "id": ""
             },
             "choices": {
-                "primary-400 dark:bg-primary-800": "Orange Dark",
-                "primary-300 dark:bg-primary-700": "Orange",
-                "primary-200 dark:bg-primary-600": "Orange Light",
-                "primary-100 dark:bg-primary-500": "Orange Extra Light",
-                "secondary-400 dark:bg-secondary-800": "Yellow Dark",
-                "secondary-300 dark:bg-secondary-700": "Yellow",
-                "secondary-200 dark:bg-secondary-600": "Yellow Light",
-                "secondary-100 dark:bg-secondary-500": "Yellow Extra Light",
-                "tertiary-400 dark:bg-tertiary-800": "Blue Dark",
-                "tertiary-300 dark:bg-tertiary-700": "Blue",
-                "tertiary-200 dark:bg-tertiary-600": "Blue Light",
-                "tertiary-100 dark:bg-tertiary-500": "Blue Extra Light",
-                "quaternary-400 dark:bg-quaternary-800": "Cyan Dark",
-                "quaternary-300 dark:bg-quaternary-700": "Cyan",
-                "quaternary-200 dark:bg-quaternary-600": "Cyan Light",
-                "quaternary-100 dark:bg-quaternary-500": "Cyan Extra Light"
+                "primary-400": "Orange Dark",
+                "primary-300": "Orange",
+                "primary-200": "Orange Light",
+                "primary-100": "Orange Extra Light",
+                "secondary-400": "Yellow Dark",
+                "secondary-300": "Yellow",
+                "secondary-200": "Yellow Light",
+                "secondary-100": "Yellow Extra Light",
+                "tertiary-400": "Blue Dark",
+                "tertiary-300": "Blue",
+                "tertiary-200": "Blue Light",
+                "tertiary-100": "Blue Extra Light",
+                "quaternary-400": "Cyan Dark",
+                "quaternary-300": "Cyan",
+                "quaternary-200": "Cyan Light",
+                "quaternary-100": "Cyan Extra Light"
             },
-            "default_value": false,
+            "default_value": "primary-300",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -121,5 +121,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1770716633
+    "modified": 1771252688
 }

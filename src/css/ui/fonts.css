@@ -1,25 +1,21 @@
-/* Untitled Sans - Medium only */
+/* ABCCameraRoundedPlain - Regular */
 @font-face {
-	font-family: 'Untitled Sans';
+	font-family: 'ABCCameraRoundedPlain';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('../../fonts/ABCCameraRoundedPlain-Regular.woff2') format('woff2'),
+		url('../../fonts/ABCCameraRoundedPlain-Regular.woff') format('woff');
+}
+
+/* ABCCameraRoundedPlain - Medium */
+@font-face {
+	font-family: 'ABCCameraRoundedPlain';
 	font-style: normal;
 	font-weight: 500;
 	font-display: swap;
-	src: url('../../fonts/untitled-sans-web-medium.woff2') format('woff2'),
-		url('../../fonts/untitled-sans-web-medium.woff') format('woff');
-}
-
-@font-face {
-	font-family: 'Untitled Sans';
-	font-style: italic;
-	font-weight: 500;
-	font-display: swap;
-	src: url('../../fonts/untitled-sans-web-medium-italic.woff2') format('woff2'),
-		url('../../fonts/untitled-sans-web-medium-italic.woff') format('woff');
-}
-
-/* Set default font-weight to 500 (medium) for all elements */
-*, *::before, *::after {
-	font-weight: 500;
+	src: url('../../fonts/ABCCameraRoundedPlain-Medium.woff2') format('woff2'),
+		url('../../fonts/ABCCameraRoundedPlain-Medium.woff') format('woff');
 }
 
 /* IBM Plex Mono - Regular */
