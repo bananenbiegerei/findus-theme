@@ -1,7 +1,10 @@
 @layer base {
+	h1, h2, h3, h4, h5, h6 {
+		@apply font-medium;
+	}
+
 	:where(h1, h2, h3, h4, h5, h6) {
 		@apply mb-2 leading-tight;
-		font-weight: 500;
 	}
 
 	:where(h1, .h1) {
@@ -24,8 +27,7 @@
 	}
 
 	:where(p, ul:not([class]), ol:not([class])) {
-		@apply mb-6 max-w-6xl text-lg leading-tight lg:text-xl;
-		font-weight: 400;
+		@apply mb-6 max-w-6xl text-lg leading-tight lg:text-xl font-normal;
 	}
 }
 

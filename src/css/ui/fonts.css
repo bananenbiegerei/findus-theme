@@ -17,13 +17,3 @@
 	src: url('../../fonts/ABCCameraRoundedPlain-Medium.woff2') format('woff2'),
 		url('../../fonts/ABCCameraRoundedPlain-Medium.woff') format('woff');
 }
-
-/* IBM Plex Mono - Regular */
-@font-face {
-	font-family: 'IBM Plex Mono';
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: url('../../fonts/ibm-plex-mono-v12-latin-regular.woff2') format('woff2'),
-		url('../../fonts/ibm-plex-mono-v12-latin-regular.woff') format('woff');
-}
