@@ -3,30 +3,30 @@
 		@apply font-medium;
 	}
 
-	:where(h1, h2, h3, h4, h5, h6) {
+	h1, h2, h3, h4, h5, h6 {
 		@apply mb-2 leading-tight;
 	}
 
-	:where(h1, .h1) {
-		@apply text-2xl lg:text-5xl;
+	h1, .h1 {
+		@apply text-2xl lg:text-4xl;
 	}
-	:where(h2, .h2) {
-		@apply text-2xl lg:text-3xl;
+	h2, .h2 {
+		@apply text-2xl lg:text-4xl;
 	}
-	:where(h3, .h3) {
-		@apply text-xl lg:text-2xl;
+	h3, .h3 {
+		@apply text-2xl lg:text-4xl;
 	}
-	:where(h4, .h4) {
-		@apply text-lg lg:text-xl;
+	h4, .h4 {
+		@apply text-2xl lg:text-4xl;
 	}
-	:where(h5, .h5) {
-		@apply text-base lg:text-lg;
+	h5, .h5 {
+		@apply text-2xl lg:text-4xl;
 	}
-	:where(h6, .h6) {
-		@apply text-sm lg:text-base;
+	h6, .h6 {
+		@apply text-2xl lg:text-4xl;
 	}
 
-	:where(p, ul:not([class]), ol:not([class])) {
+	p, ul:not([class]), ol:not([class]) {
 		@apply mb-6 max-w-6xl text-lg leading-tight lg:text-xl font-normal;
 	}
 }
@@ -40,7 +40,7 @@
 	}
 }
 /* Strange thing coming from WP */
-a:where(:not(.wp-element-button)) {
+a:not(.wp-element-button) {
 	@apply no-underline;
 }
 

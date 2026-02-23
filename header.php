@@ -6,4 +6,4 @@
 <body <?php body_class('flex flex-col min-h-screen'); ?>>
     <?php get_template_part('bb-components/bb-navbars/bb-navbar-animated/render'); ?>
 
-    <main class="flex-1 mt-16 main-content">
+    <main class="flex-1 mt-16 md:mt-18 main-content">

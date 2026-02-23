@@ -9,6 +9,13 @@ import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper';
 // Plyr video player
 import Plyr from 'plyr';
 
+// GSAP + ScrollTrigger — exposed globally for block scripts
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+window.gsap = gsap;
+window.ScrollTrigger = ScrollTrigger;
+
 // Make Swiper available globally for block scripts
 window.Swiper = Swiper;
 window.Navigation = Navigation;

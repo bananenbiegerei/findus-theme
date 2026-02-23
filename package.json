@@ -40,6 +40,7 @@
 	"dependencies": {
 		"@alpinejs/focus": "^3.15.4",
 		"basecoat-css": "^0.3.10",
+		"gsap": "^3.14.2",
 		"jquery": "^3.5.1",
 		"plyr": "^3.8.4",
 		"swiper": "^7.4.1"

@@ -13,7 +13,7 @@
 
 .bb-row {
 	[class^="bb-block-"] {
-		@apply aspect-auto h-full;
+		@apply md:aspect-auto md:h-full;
 	}
 	/* .bb-block-image {
 		img {
