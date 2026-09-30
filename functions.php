@@ -39,6 +39,9 @@ require_once get_template_directory() . '/functions/excerpts.php';
 // Disable comments
 require_once get_template_directory() . '/functions/comments.php';
 
+// Custom role capabilities
+require_once get_template_directory() . '/functions/roles.php';
+
 // Block converter and unsupported blocks
 //require_once get_template_directory() . '/functions/block-converter.php';
 
