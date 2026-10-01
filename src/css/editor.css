@@ -52,6 +52,13 @@
 			width: 100%;
 		}
 	}
+	/* Block previews render real <a href> markup (Card, Image, Flip Card, etc.) -
+	   clicking one while editing navigates the editor canvas away. Disable all
+	   link interaction here; the frontend is unaffected since this file only
+	   loads via enqueue_block_editor_assets. */
+	a {
+		pointer-events: none;
+	}
 	.swiper-wrapper {
 		@apply grid grid-cols-4 gap-5;
 	}
