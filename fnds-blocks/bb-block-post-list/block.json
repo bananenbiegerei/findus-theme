@@ -1,0 +1,15 @@
+{
+	"name": "bb/post-list",
+	"title": "Post List",
+	"description": "Display a list of selected posts",
+	"category": "custom-blocks",
+	"icon": "list-view",
+	"keywords": ["posts", "list", "custom"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "post-list.php"
+	},
+	"supports": {
+		"align": false
+	}
+}

@@ -2,29 +2,21 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width">
     <script>
-    // https://basecoatui.com/components/theme-switcher/
     (() => {
-        try {
-            const stored = localStorage.getItem('themeMode');
-            if (stored ? stored === 'dark' :
-                matchMedia('(prefers-color-scheme: dark)').matches) {
-                document.documentElement.classList.add('dark');
-            }
-        } catch (_) {}
+        const media = matchMedia('(prefers-color-scheme: dark)');
 
-        const apply = dark => {
+        const apply = () => {
+            const dark = media.matches;
             document.documentElement.classList.toggle('dark', dark);
-            try {
-                localStorage.setItem('themeMode', dark ? 'dark' : 'light');
-            } catch (_) {}
+            document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
         };
 
-        document.addEventListener('basecoat:theme', (event) => {
-            const mode = event.detail?.mode;
-            apply(mode === 'dark' ? true :
-                mode === 'light' ? false :
-                !document.documentElement.classList.contains('dark'));
-        });
+        try {
+            localStorage.removeItem('themeMode');
+        } catch (_) {}
+
+        apply();
+        media.addEventListener('change', apply);
     })();
     </script>
     <?php wp_head(); ?>

@@ -1,0 +1,15 @@
+{
+	"name": "bb/explosion",
+	"title": "Explosion",
+	"description": "Explosion block",
+	"category": "bb-blocks",
+	"icon": "star-filled",
+	"keywords": ["explosion"],
+	"acf": {
+		"mode": "false",
+		"renderTemplate": "explosion.php"
+	},
+	"supports": {
+		"align": false
+	}
+}

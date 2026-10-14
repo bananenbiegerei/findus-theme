@@ -1,0 +1,13 @@
+{
+	"name": "bb/paragraph",
+	"title": "Text",
+	"description": "Block for text, lists und paragraphs",
+	"category": "custom-blocks",
+	"icon": "editor-paragraph",
+	"keywords": [],
+	"acf": {
+		"mode": "false",
+		"renderTemplate": "paragraph.php"
+	},
+	"align": "full"
+}

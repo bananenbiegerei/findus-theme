@@ -1,0 +1,16 @@
+{
+	"name": "bb/home",
+	"title": "Grid",
+	"description": "Static front page content",
+	"category": "custom-blocks",
+	"icon": "grid-view",
+	"keywords": ["home", "front page"],
+	"acf": {
+		"mode": "false",
+		"hideFieldsInSidebar": true,
+		"renderTemplate": "home.php"
+	},
+	"supports": {
+		"align": false
+	}
+}

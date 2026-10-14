@@ -1,0 +1,18 @@
+{
+	"name": "bb/dialog",
+	"title": "Dialog",
+	"description": "Modal dialog with button trigger",
+	"category": "custom-blocks",
+	"icon": "format-chat",
+	"keywords": ["modal", "popup", "dialog"],
+	"acf": {
+		"mode": "false",
+		"renderTemplate": "dialog.php"
+	},
+	"supports": {
+		"align": false
+	},
+	"bb": {
+		"colors": [{ "key": "field_697b8fa7ff0c1", "name": "background_color", "bw": false, "none": false }]
+	}
+}

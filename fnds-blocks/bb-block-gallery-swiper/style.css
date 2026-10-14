@@ -1,0 +1,73 @@
+.bb-block-gallery-swiper {
+    @apply relative;
+
+    figure {
+        @apply mb-0;
+    }
+
+    .swiper {
+        @apply relative;
+
+        /* Navigation buttons - vertically centered on sides with curved edges */
+        .swiper-button-next,
+        .swiper-button-prev {
+            @apply absolute top-1/2 -translate-y-1/2 m-0 w-8 h-16 text-white text-2xl transition z-10 flex items-center justify-center after:content-none hover:w-10 transition;
+
+            /* Curved edge containers */
+            .edge-top,
+            .edge-bottom {
+                @apply absolute w-[15px] h-[15px];
+
+                svg {
+                    @apply block w-full h-full;
+                    color: inherit;
+                }
+            }
+
+            .edge-top {
+                @apply -top-[15px];
+            }
+
+            .edge-bottom {
+                @apply -bottom-[15px];
+            }
+        }
+
+        .swiper-button-prev {
+            @apply left-0 rounded-r-lg md:rounded-r-xl;
+
+            .edge-top {
+                @apply left-0 rotate-90;
+            }
+
+            .edge-bottom {
+                @apply left-0 rotate-180;
+            }
+        }
+
+        .swiper-button-next {
+            @apply right-0 rounded-l-lg md:rounded-l-xl;
+
+            .edge-top {
+                @apply right-0;
+            }
+
+            .edge-bottom {
+                @apply right-0 -rotate-90;
+            }
+        }
+
+        /* Pagination bullets - centered at bottom */
+        .swiper-pagination {
+            @apply absolute bottom-2 left-1/2 -translate-x-1/2 w-auto flex z-10;
+
+            .swiper-pagination-bullet {
+                @apply w-3 h-3 rounded-full bg-white opacity-100 transition;
+
+                &.swiper-pagination-bullet-active {
+                    @apply bg-black;
+                }
+            }
+        }
+    }
+}

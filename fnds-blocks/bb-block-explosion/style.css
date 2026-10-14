@@ -1,0 +1,28 @@
+.bb-block-explosion {
+	/* Total scroll height: one viewport per image + three extra (animations + linger) */
+	height: calc((var(--explosion-count, 1) + 3) * 100vh);
+	@apply relative;
+
+	.explosion-sticky {
+		@apply sticky top-8 w-full overflow-hidden;
+		height: calc(100vh - 4rem);
+	}
+
+	.explosion-stage {
+		@apply relative w-full h-full;
+	}
+
+	.explosion-image {
+		@apply absolute inset-0;
+		opacity: 0; /* GSAP animates this */
+		will-change: transform, opacity;
+
+		img {
+			@apply w-full h-full block object-cover;
+		}
+	}
+
+	.explosion-description {
+		opacity: 0; /* GSAP animates this */
+	}
+}

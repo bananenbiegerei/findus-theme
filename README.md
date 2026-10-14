@@ -47,7 +47,7 @@ The Prettier config is defined in `package.json` under the `prettier` key and sh
 ACF field groups are stored as JSON files for version control and synchronization.
 
 **Directory structure:**
-- `bb-blocks/acf-json/` - Field groups for the blocks submodule (managed in bb-blocks repo)
+- `fnds-blocks/acf-json/` - Field groups for the blocks submodule (managed in bb-blocks repo)
 - `acf-json/` - Theme-specific field groups (currently empty, for custom fields)
 
 **How it works:**
@@ -78,7 +78,7 @@ This theme uses Tailwind CSS v4 with the new CSS-first configuration.
 ```css
 @import "tailwindcss";
 @source "../../**/*.php";
-@source "../../bb-blocks/**/*.php";
+@source "../../fnds-blocks/**/*.php";
 ```
 
 - `@import "tailwindcss"` - Loads Tailwind base, components, and utilities

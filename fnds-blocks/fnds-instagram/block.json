@@ -1,0 +1,15 @@
+{
+	"name": "bb/fnds-instagram",
+	"title": "Instagram",
+	"description": "Instagram feed",
+	"category": "custom-blocks",
+	"icon": "instagram",
+	"keywords": ["instagram"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "instagram.php"
+	},
+	"supports": {
+		"align": false
+	}
+}

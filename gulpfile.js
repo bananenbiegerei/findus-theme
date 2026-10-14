@@ -56,8 +56,8 @@ function dev() {
 		proxy: process.env.BROWSERSYNC_PROXY_URL,
 		open: process.env.BROWSERSYNC_OPEN_BROWSER == 'true',
 	});
-	watch(['./src/css/**/*.css', './bb-blocks/**/*.css'], stylesDev);
-	watch(['./src/js/**/*.js', './bb-blocks/**/*.js'], esbuildDev).on('change', browserSync.reload);
+	watch(['./src/css/**/*.css', './fnds-blocks/**/*.css'], stylesDev);
+	watch(['./src/js/**/*.js', './fnds-blocks/**/*.js'], esbuildDev).on('change', browserSync.reload);
 	watch('./**/*.php', stylesDev).on('change', browserSync.reload);
 	watch(['./img/**/*.*', './fonts/**/*.*']).on('change', browserSync.reload);
 }

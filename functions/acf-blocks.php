@@ -1,7 +1,7 @@
 <?php
 
 // Load BB Components (flexible content)
-require_once get_template_directory() . '/bb-blocks/init.php';
+require_once get_template_directory() . '/fnds-blocks/init.php';
 
 /**
  * Define which BB blocks are enabled for this theme.

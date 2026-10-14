@@ -17,8 +17,10 @@
 @import "./theme";
 
 /* BB Blocks */
-@import "../../bb-blocks/bb-block-image/style.css";
-@import "../../bb-blocks/bb-block-gallery-swiper/style.css";
+@import "../../fnds-blocks/bb-block-image/style.css";
+@import "../../fnds-blocks/bb-block-paragraph/style.css";
+@import "../../fnds-blocks/bb-block-gallery-swiper/style.css";
+@import "../../fnds-blocks/bb-block-table/style.css";
 
 /* Editor-specific styles */
 .editor-styles-wrapper {
@@ -26,7 +28,7 @@
 	.hide-for-editor {
 		display: none;
 	}
-	@apply overflow-hidden p-0 font-sans font-normal;
+	@apply overflow-x-hidden p-0 font-sans font-normal;
 
 	.wp-block-group {
 		border: dotted 1px grey;

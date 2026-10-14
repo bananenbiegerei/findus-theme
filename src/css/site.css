@@ -24,7 +24,9 @@
 @import "plyr/dist/plyr.css";
 
 /* BB Blocks */
-@import "../../bb-blocks/bb-block-image/style.css";
-@import "../../bb-blocks/bb-block-gallery-swiper/style.css";
-@import "../../bb-blocks/bb-block-video/style.css";
-@import "../../bb-blocks/bb-block-explosion/style.css";
+@import "../../fnds-blocks/bb-block-image/style.css";
+@import "../../fnds-blocks/bb-block-paragraph/style.css";
+@import "../../fnds-blocks/bb-block-gallery-swiper/style.css";
+@import "../../fnds-blocks/bb-block-video/style.css";
+@import "../../fnds-blocks/bb-block-explosion/style.css";
+@import "../../fnds-blocks/bb-block-table/style.css";

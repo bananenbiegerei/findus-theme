@@ -1,0 +1,15 @@
+{
+	"name": "bb/flip-card",
+	"title": "Flip Card",
+	"description": "Card that flips on click to reveal backside content",
+	"category": "custom-blocks",
+	"icon": "image-flip-horizontal",
+	"keywords": ["flip", "card", "rotate"],
+	"acf": {
+		"mode": "false",
+		"renderTemplate": "flip-card.php"
+	},
+	"supports": {
+		"align": false
+	}
+}

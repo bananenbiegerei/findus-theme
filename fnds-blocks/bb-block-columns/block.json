@@ -1,0 +1,15 @@
+{
+	"name": "bb/columns",
+	"title": "Columns",
+	"description": "Flexible columns layout with images",
+	"category": "custom-blocks",
+	"icon": "columns",
+	"keywords": ["columns", "grid", "layout"],
+	"acf": {
+		"mode": "false",
+		"renderTemplate": "columns.php"
+	},
+	"supports": {
+		"align": false
+	}
+}

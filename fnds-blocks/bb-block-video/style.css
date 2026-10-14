@@ -1,0 +1,35 @@
+.bb-block-video {
+    /* --plyr-color-main is set inline on the container */
+
+    .plyr__control--overlaid {
+        background: var(--plyr-color-main, var(--color-secondary));
+        @apply rounded-lg md:rounded-xl;
+    }
+
+    .plyr__control:hover {
+        background: var(--plyr-color-main, var(--color-secondary));
+    }
+
+    .plyr__progress__buffer {
+        color: var(--plyr-color-main, var(--color-secondary));
+    }
+
+    .plyr--full-ui input[type=range] {
+        color: var(--plyr-color-main, var(--color-secondary));
+    }
+
+    /* When aspect ratio is applied, make Plyr fill the container */
+    &[class*="aspect-"] {
+        .plyr {
+            @apply w-full h-full;
+        }
+
+        .plyr__video-wrapper {
+            @apply h-full;
+        }
+
+        video {
+            @apply w-full h-full object-cover;
+        }
+    }
+}

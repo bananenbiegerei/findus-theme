@@ -1,0 +1,15 @@
+{
+	"name": "bb/table",
+	"title": "Table",
+	"description": "Table with flexible columns and an optional head",
+	"category": "custom-blocks",
+	"icon": "editor-table",
+	"keywords": ["table"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "table.php"
+	},
+	"supports": {
+		"align": false
+	}
+}

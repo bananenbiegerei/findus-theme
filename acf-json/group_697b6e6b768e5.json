@@ -198,6 +198,38 @@
                             ],
                             "min": "",
                             "max": ""
+                        },
+                        "layout_fnds_table_rows": {
+                            "key": "layout_fnds_table_rows",
+                            "name": "table",
+                            "label": "Table",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_fnds_clone_table_rows",
+                                    "label": "Table",
+                                    "name": "table",
+                                    "aria-label": "",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "clone": [
+                                        "group_fnds_table"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 1
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
                         }
                     },
                     "min": 1,
@@ -225,5 +257,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Rows field group for nested columns layout",
-    "show_in_rest": 0
+    "show_in_rest": 0,
+    "modified": 1791972100
 }

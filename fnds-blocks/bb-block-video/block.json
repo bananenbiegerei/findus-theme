@@ -1,0 +1,16 @@
+{
+	"name": "bb/video",
+	"title": "Video",
+	"description": "HTML Video player, for embedding videos in a page. Valid formats are mp4, ogg, webm",
+	"category": "custom-blocks",
+	"icon": "video-alt3",
+	"keywords": [],
+	"acf": {
+		"mode": "false",
+		"renderTemplate": "video.php"
+	},
+	"align": "full",
+	"bb": {
+		"colors": [{ "key": "field_697a0006vide6", "name": "background_color", "bw": false, "none": false }]
+	}
+}
