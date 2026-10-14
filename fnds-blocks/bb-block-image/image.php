@@ -22,7 +22,9 @@ $aspect_ratio = get_field('aspect_ratio_aspect_ratio') ?: ($args['aspect_ratio']
 // The overlay gradient is separate from $background_color. Tint the text with the
 // same color family (primary/secondary/tertiary/quaternary) at its light "-200" shade.
 $text_on_image_color = 'text-white';
-if ($background_color && $background_color !== 'none') {
+if ($hide_text_gradient) {
+	$text_on_image_color = 'text-black';
+} elseif ($background_color && $background_color !== 'none') {
 	$color_family = preg_replace('/-\d+$/', '', $background_color);
 	$text_on_image_color = "text-{$color_family}-200";
 }

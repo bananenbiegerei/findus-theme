@@ -43,6 +43,27 @@
             "prefix_name": 1
         },
         {
+            "key": "field_para_grow_with_content",
+            "label": "Grow with content",
+            "name": "grow_with_content",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Yes lets the block grow when the text is taller than the aspect ratio. No keeps the aspect ratio and scrolls.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        },
+        {
             "key": "field_6abe71para02",
             "label": "Grid Behaviour",
             "name": "layout",
@@ -211,5 +232,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1790868873
+    "modified": 1791982800
 }

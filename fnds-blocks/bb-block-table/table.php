@@ -5,12 +5,24 @@ if (array_key_exists('columns', $args)) {
 	$columns = $args['columns'];
 	$show_head = $args['show_head'] ?? false;
 	$background_color = $args['background_color'] ?? '';
+	$aspect_ratio = $args['aspect_ratio'] ?? 'aspect-din-portrait';
+	$grow_with_content = $args['grow_with_content'] ?? null;
 } else {
 	// Field name "columns" also belongs to the columns block, so read this block by field key.
 	$columns = get_field('field_fnds_table_columns');
 	$show_head = get_field('field_fnds_table_show_head');
 	$background_color = get_field('background_color_background_color');
+	$aspect_ratio = get_field('aspect_ratio_aspect_ratio') ?: 'aspect-din-portrait';
+	$grow_with_content = get_field('grow_with_content');
 }
+
+if ($grow_with_content === null || $grow_with_content === '') {
+	$grow_with_content = false;
+}
+$grow_with_content = in_array($grow_with_content, [true, 1, '1'], true);
+$frame_class = $grow_with_content
+	? 'is-aspect-grow'
+	: 'h-full max-h-full overflow-y-auto md:' . $aspect_ratio;
 
 $show_head = in_array($show_head, [1, '1', true], true);
 $columns = is_array($columns) ? $columns : [];
@@ -44,7 +56,8 @@ if (!$normalized) {
 	return;
 }
 ?>
-<div class="bb-block-table overflow-x-auto p-4 rounded-lg md:rounded-xl text-black text-base md:text-xl <?= esc_attr($bg_class) ?>">
+<div class="bb-block-table overflow-x-hidden p-4 rounded-lg md:rounded-xl text-black text-base md:text-xl <?= esc_attr($bg_class) ?> <?= esc_attr($frame_class) ?>">
+	<div class="bb-block-table-scroll min-w-0 overflow-x-auto">
 	<table>
 		<?php if ($show_head): ?>
 		<thead>
@@ -67,4 +80,5 @@ if (!$normalized) {
 		</tbody>
 		<?php endif; ?>
 	</table>
+	</div>
 </div>

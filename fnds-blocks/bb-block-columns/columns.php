@@ -6,7 +6,7 @@ if (!$columns) {
 
 // Count repeater items to set grid columns
 $column_count = count($columns);
-$grid_class = "grid grid-cols-1 md:grid-cols-{$column_count} gap-2";
+$grid_class = "grid grid-cols-1 lg:grid-cols-{$column_count} gap-2";
 
 if (!function_exists('bb_render_flexible_content')) {
 	/**
@@ -34,6 +34,7 @@ if (!function_exists('bb_render_flexible_content')) {
 				'background_color' => $layout['text_background_color_background_color'] ?? $layout['text_background_color'] ?? '',
 				'text_size' => $layout['text_text_size'] ?? $layout['text']['text_size'] ?? '',
 				'aspect_ratio' => $layout['text_aspect_ratio_aspect_ratio'] ?? $layout['text_aspect_ratio'] ?? 'aspect-din-portrait',
+				'grow_with_content' => $layout['text_grow_with_content'] ?? $layout['text']['grow_with_content'] ?? null,
 			]);
 		} elseif ($layout['acf_fc_layout'] === 'card') {
 			// Clone fields with prefix_name create: card_background_color_background_color, card_aspect_ratio_aspect_ratio
@@ -83,6 +84,8 @@ if (!function_exists('bb_render_flexible_content')) {
 				'show_head' => $layout['table_show_head'] ?? $layout['table']['show_head'] ?? false,
 				'columns' => $layout['table_columns'] ?? $layout['table']['columns'] ?? [],
 				'background_color' => $layout['table_background_color_background_color'] ?? $layout['table_background_color'] ?? '',
+				'aspect_ratio' => $layout['table_aspect_ratio_aspect_ratio'] ?? $layout['table']['aspect_ratio_aspect_ratio'] ?? 'aspect-din-portrait',
+				'grow_with_content' => $layout['table_grow_with_content'] ?? $layout['table']['grow_with_content'] ?? null,
 			]);
 		} elseif ($layout['acf_fc_layout'] === 'video') {
 			// Clone fields: video_video, video_cover_image, video_color_scheme_color_scheme, video_autoplay, video_loop, video_aspect_ratio
@@ -108,7 +111,7 @@ if (!function_exists('bb_render_columns_2nd_level')) {
 		}
 
 		$column_count = count($columns_data);
-		$grid_class = "grid grid-cols-1 md:grid-cols-{$column_count} gap-2";
+		$grid_class = "grid grid-cols-1 lg:grid-cols-{$column_count} gap-2";
 		?>
 		<div class="bb-columns-2nd h-full <?= $grid_class ?>">
 			<?php foreach ($columns_data as $column): ?>

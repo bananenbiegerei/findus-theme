@@ -42,6 +42,9 @@ require_once get_template_directory() . '/functions/comments.php';
 // Custom role capabilities
 require_once get_template_directory() . '/functions/roles.php';
 
+// Color scheme column on post list tables
+require_once get_template_directory() . '/functions/admin-color-scheme.php';
+
 // Block converter and unsupported blocks
 //require_once get_template_directory() . '/functions/block-converter.php';
 

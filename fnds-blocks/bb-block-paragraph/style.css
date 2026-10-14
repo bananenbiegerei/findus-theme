@@ -1,4 +1,10 @@
 .bb-block-paragraph {
+	&.is-aspect-grow {
+		height: auto;
+		max-height: none;
+		overflow: visible;
+	}
+
 	p {
 		font-size: inherit;
 	}

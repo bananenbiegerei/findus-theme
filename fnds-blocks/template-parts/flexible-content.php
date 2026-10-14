@@ -35,6 +35,7 @@ foreach ($items as $layout) {
 				'background_color' => $layout['text_background_color_background_color'] ?? $layout['text_background_color'] ?? '',
 				'text_size' => $layout['text_text_size'] ?? $layout['text']['text_size'] ?? '',
 				'aspect_ratio' => $layout['text_aspect_ratio_aspect_ratio'] ?? $layout['text_aspect_ratio'] ?? 'aspect-din-portrait',
+				'grow_with_content' => $layout['text_grow_with_content'] ?? $layout['text']['grow_with_content'] ?? null,
 			]);
 			break;
 
@@ -93,6 +94,8 @@ foreach ($items as $layout) {
 				'show_head' => $layout['table_show_head'] ?? $layout['table']['show_head'] ?? false,
 				'columns' => $layout['table_columns'] ?? $layout['table']['columns'] ?? [],
 				'background_color' => $layout['table_background_color_background_color'] ?? $layout['table_background_color'] ?? '',
+				'aspect_ratio' => $layout['table_aspect_ratio_aspect_ratio'] ?? $layout['table']['aspect_ratio_aspect_ratio'] ?? 'aspect-din-portrait',
+				'grow_with_content' => $layout['table_grow_with_content'] ?? $layout['table']['grow_with_content'] ?? null,
 			]);
 			break;
 

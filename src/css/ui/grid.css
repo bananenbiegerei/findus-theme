@@ -11,8 +11,18 @@
 	/* @apply col-span-12; */
 }
 
+/* The home row is as tall as its tallest block. The block keeps its aspect
+   ratio as a minimum, then grows so the background fills the cell. */
+.bb-home-cell {
+	@apply flex flex-col;
+
+	> [class^="bb-block-"] {
+		@apply w-full grow;
+	}
+}
+
 .bb-row {
-	[class^="bb-block-"] {
+	[class^="bb-block-"]:not(.bb-block-paragraph):not(.bb-block-table) {
 		@apply md:aspect-auto md:h-full;
 	}
 	/* .bb-block-image {

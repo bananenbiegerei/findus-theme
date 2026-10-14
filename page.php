@@ -3,7 +3,7 @@ $color_scheme = get_field('color_scheme');
 $hide_excerpt = get_field('hide_excerpt');
 ?>
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-<div class="container">
+<div class="container mb-4">
     <?php if (!$hide_excerpt): ?>
 		<div class="p-4 rounded-lg md:rounded-xl bg-<?= $color_scheme; ?>-400 min-h-[400px] flex flex-col mb-2 text-black">
         <div class="flex-1">
